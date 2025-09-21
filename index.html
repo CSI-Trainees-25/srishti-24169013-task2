@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To Do List</title>
-    <link rel="stylesheet" href="styles/index.css">
-    </head>
-    <body>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>To Do List-Dashboard</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
 
-<div class="container">
- 
-  <h1>My To Do List</h1>
-  <div class="input-box">
-    <input type="text" id="taskInput" placeholder="Add a new task">
-    <button id="taskbtn">Add</button>
+<div class="heading">
+<button class="task">Task</button>
+<button class="plus">+</button>
+<div class="record">
+<span id="total">Task</span>
+<span id="line">|</span>
+<span id="inprogress">In progress</span>
+<span id="line">|</span>
+<span id="done">Done</span>
 </div>
-<ul id="list"></ul>
 </div>
+
+<main class="container">
+<section class="left-section">
+<div class="card add-card">
+<label>Task title
+<input id="task-name" type="text" placeholder="Enter task title" />
+</label>
+<label>Duration
+<input id="task-duration" type="number" min="0.1" step="0.1" value="1" />
+</label>
+<label>Execute At (date & time)
+<input id="task-date-time" type="datetime-local" />
+</label>
+<div class="row">
+<button id="add-task" class="add-button">Add Task</button>
+<button id="clear-all" class="clear-button">Clear</button>
+</div>
+</div>
+<div class="drag-drop">
+<div class="head">
+<h3>Tasks</h3>
+<div class="counters">
+<span id="total-count">total</span>
+<span id="line">|</span>
+<span id="running-count">running</span>
+<span id="line">|</span>
+<span id="done-count">done</span>
+</div>
+</div>
+<ul id="task-list" class="task-list" label="Task list"></ul>
+<p class="hint">Drag and drop tasks.</p>
+</div>
+</section>
+
+<div class="right-section">
+<div class="recent">
+<h3>Recent</h3>
+<div class="now">
+<p>No active task</p>
+</div>
+<div class="note">You may Skip or Complete tasks.</div>
+</div>
+</div>
+</main>
 </body>
 </html>
