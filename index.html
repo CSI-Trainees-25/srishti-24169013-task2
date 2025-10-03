@@ -4,20 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>To Do List-Dashboard</title>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="heading">
-<button class="task">Task</button>
-<button class="plus">+</button>
-<div class="record">
-<span id="total">Task</span>
-<span id="line">|</span>
-<span id="inprogress">In progress</span>
-<span id="line">|</span>
-<span id="done">Done</span>
-</div>
+To-Do List Dashboard
 </div>
 
 <main class="container">
@@ -51,6 +43,10 @@
 <ul id="task-list" class="task-list" label="Task list"></ul>
 <p class="hint">Drag and drop tasks.</p>
 </div>
+<div class="main-controls">
+<button id="start-tasks-btn" class="start-button">🚀 Start All Tasks</button>
+<button id="end-early-btn" class="end-button">🏁 End Tasks Early</button>
+</div>
 </section>
 
 <div class="right-section">
@@ -59,9 +55,9 @@
 <div class="now">
 <p>No active task</p>
 </div>
-<div class="note">You may Skip or Complete tasks.</div>
 </div>
 </div>
 </main>
+<script src="script.js"></script>
 </body>
 </html>

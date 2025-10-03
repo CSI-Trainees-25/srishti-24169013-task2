@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Summary</title>
+<link rel="stylesheet" href="style.css">
+<style> 
+.summary-card {
+   background-color:white;
+    border-radius:12px; 
+    padding:20px; 
+    box-shadow:0 6px 20px rgba(20,10,60,0.04);
+   }
+.summary-item {
+   padding: 10px; 
+   border-left: 5px solid; 
+   margin-bottom: 8px; 
+   background-color: white;
+   }
+.summary-item.completed { 
+  border-left-color: green; 
+}
+.summary-item.skipped { 
+  border-left-color:orange; 
+}
+.summary-item.pending { 
+  border-left-color: grey;
+   }
+</style>
+</head>
+<body>
+<main class="container">
+<div class="summary-card">
+<h1>Task Summary</h1>
+<div id="summary-list"></div>
+<button class="add-button" onclick="window.location.href='index.html'">Go Back</button>
+</div>
+</main>
+<script src="summary.js"></script>
+</body>
+</html>
+
